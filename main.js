@@ -1,23 +1,24 @@
 (function(){'use strict';
-	let lim = ~(-1n << 68n) //upper bound of already-checked ints
-	const Int = BigInt, isMersenne = n => !(n & (n + 1n)),
-	check = n => {
+	const Int = BigInt,
+		Mersenne = n => ~(-1n << n),
+		isMersenne = n => !(n & (n + 1n))
+	let lim = Mersenne(68n) //upper bound of already-checked ints
+	const check = () => {
+		let n = lim
 		const seen = new Set
-		while (n >= lim){
-			if (n & 1n) {
-				seen.add(n) //we only care about odd ints
-				if (isMersenne(n *= 3n)) break //discard future power of 2
-				n++
-			}
+		do {
+			seen.add(n)
+			if (isMersenne(n *= 3n)) break //discard future power of 2
+			n++
 			do n >>= 1n; while ( !(n & 1n) ) //remove all trailing zeros
 			if (seen.has(n)) return false //found counterexample by cycle recognition
-		}
+		} while (n >= lim)
 		return true
 	}
 
 	globalThis.Collatz = {
 		search: n => { //find a counterexample, if it exists
-			for (n = Int(n) + lim; lim < n; lim += 2n) if (!check(lim)) return lim
+			for (n = Int(n) + lim; lim < n; lim += 2n) if (!check()) return lim
 			return undefined
 		}
 	}
