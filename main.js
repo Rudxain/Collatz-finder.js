@@ -7,9 +7,9 @@
 			if (n & 1n) {
 				seen.add(n) //we only care about odd ints
 				if (isMersenne(n *= 3n)) break //discard future power of 2
-				n++; n >>= 1n //immediate div
+				n++
 			}
-			else do n >>= 1n; while ( !(n & 1n) ) //remove all trailing zeros
+			do n >>= 1n; while ( !(n & 1n) ) //remove all trailing zeros
 			if (seen.has(n)) return false //found counterexample by cycle recognition
 		}
 		return true
