@@ -6,9 +6,8 @@
 		do {
 			n *= 3n; n++
 			do n >>= 1n; while (!(n & 1n)) //remove all trailing zeros
-			if (n == lim) return true //found counterexample by cycle recognition
 		} while (n > lim)
-		return false
+		return n == lim
 	}
 
 	globalThis.Collatz = {
