@@ -1,6 +1,6 @@
 (function(){'use strict';
-	const Int = BigInt, Mersenne = n => ~(-1n << n)
-	let lim = Mersenne(68n) //bound of already-checked ints
+	const Int = BigInt
+	let lim = (1n << 68n) + 1n //already-checked ints +1
 	const check = () => {
 		let n = lim
 		do {
