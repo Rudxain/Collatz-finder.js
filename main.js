@@ -12,7 +12,8 @@
 
 	globalThis.Collatz = {
 		search: n => { //find a counterexample, if it exists
-			for (n = Int(n) + lim; lim < n; lim += 2n)
+			n = Int(n)
+			for (let i = 0n; i < n; i++, lim += 2n)
 				if (check()) return lim
 			return undefined
 		}
