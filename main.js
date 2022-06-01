@@ -1,18 +1,13 @@
 (function(){'use strict';
-	const Int = BigInt,
-		Mersenne = n => ~(-1n << n),
-		isMersenne = n => !(n & (n + 1n))
-	let lim = Mersenne(68n) //upper bound of already-checked ints
+	const Int = BigInt, Mersenne = n => ~(-1n << n)
+	let lim = Mersenne(68n) //bound of already-checked ints
 	const check = () => {
 		let n = lim
-		const seen = new Set
 		do {
-			seen.add(n)
-			if (isMersenne(n *= 3n)) break //discard future power of 2
-			n++
-			do n >>= 1n; while ( !(n & 1n) ) //remove all trailing zeros
-			if (seen.has(n)) return true //found counterexample by cycle recognition
-		} while (n >= lim)
+			n *= 3n; n++
+			do n >>= 1n; while (!(n & 1n)) //remove all trailing zeros
+			if (n == lim) return true //found counterexample by cycle recognition
+		} while (n > lim)
 		return false
 	}
 
