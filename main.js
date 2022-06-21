@@ -14,7 +14,7 @@
 		for (let i = 1; i < k; i++)
 			C[b] += (D[b] = f(D[b])) & 1n
 	}
-	console.table(C) //C is wrong, not D
+	//console.table(C) //C is wrong, not D
 
 	let limPos = (1n << 68n) | 1n //already-checked positives +1
 	let limNeg = (-1n << 16n) | 1n //tested negatives
