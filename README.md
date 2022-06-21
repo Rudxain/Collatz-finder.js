@@ -1,5 +1,5 @@
 # Intro
-The purpose of this is to allow any human or program to aid in the search for a counterexample to disprove the Collatz Conjecture, and settle this infamous but interesting problem once and for all. The **website is not finished**, but the library is done.
+The purpose of this is to allow any human or program to aid in the search for a counterexample to disprove the Collatz Conjecture, and settle this infamous but interesting problem once and for all. The **website is not finished**, but the library is done. I'll add backwards-compatibility and apply minification after the basic parts are ready
 
 # What is the Collatz Conjecture?
 [Wikipedia has a good article](https://en.wikipedia.org/wiki/Collatz_conjecture) about it. Also [Numberphile has a video](https://youtu.be/5mFpVDpKX70) on it, and [Veritasium too](https://youtu.be/094y1Z2wpJg). [This video](https://youtu.be/i4OTNm7bRP8) is also very underrated
