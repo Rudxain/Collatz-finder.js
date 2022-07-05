@@ -8,7 +8,7 @@ searchBtn.addEventListener('click', () => {
 
 	//Collatz.search(getByID('inp').value)
 	interval = setInterval(() => {
-		getByID('progress').value = Collatz.progress
+		getByID('mainprog').value = Collatz.progress
 		if (Collatz.progress == 1) {
 			clearInterval(interval)
 			interval = null
