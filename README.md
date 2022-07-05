@@ -5,7 +5,7 @@ The purpose of this is to allow any human or program to aid in the search for a 
 [Wikipedia has a good article](https://en.wikipedia.org/wiki/Collatz_conjecture) about it. Also [Numberphile has a video](https://youtu.be/5mFpVDpKX70) on it, and [Veritasium too](https://youtu.be/094y1Z2wpJg). [This video](https://youtu.be/i4OTNm7bRP8) is also very underrated
 
 # How to use the library API
-You can use a script tag in your HTML files with its `src` attribute set to the path of your downloaded copy of the `lib.js` file. I recommend you rename it to something like `Collatz-finder.js` or `Collatz_checker.js`. Another option is to copy-paste the text contents of the file into the browser console, then run it. After that, you can call `Collatz.search` method within other scripts in your HTML or in the console.
+You can use a script tag in your HTML files with its `src` attribute set to the path of your downloaded copy of the `lib.js` file. I recommend you rename it to something like `Collatz-finder.js`. Another option is to copy-paste the text contents of the file into the browser console, then run it. After that, you can call `Collatz.search` method within other scripts in your HTML or in the console.
 
 `Collatz.search` takes an argument that must be coercible by the [`BigInt`](https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-bigint-constructor) constructor, so avoid invalid values or it'll throw an error. The only input argument must be the number of integers you want to check, starting from `Collatz.limitPos` if the input is positive or `limitNeg` if negative. If any of those ints is detected to be a counterexample, the method will let you know by returning that int, if no counterexample is found it returns `undefined`.
 
