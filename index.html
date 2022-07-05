@@ -1,34 +1,52 @@
 <!doctype HTML>
-<HTML lang="en">
-	<head prefix="og: https://ogp.me/ns#">
-		<meta charset="UTF-8">
-		<link rel="canonical" href="https://Rudxain.github.io/Collatz-finder">
-		<link rel="icon" type="image/svg+xml" href="icon.svg">
-		<link rel="manifest" href="m.webmanifest">
+<HTML lang=en>
+	<head prefix='og: https://ogp.me/ns#'>
+		<meta charset=UTF-8>
+		<link rel=canonical href=https://Rudxain.github.io/Collatz-finder>
+		<link rel=icon type=image/svg+xml href=icon.svg>
+		<link rel=manifest href=m.webmanifest>
 
 		<title>Collatz finder</title>
-		<meta name="description" content="Tries to find a counterexample to the Collatz Conjecture">
-		<meta name="keywords" content="Collatz, conjecture, 3n+1, counter-example, math, search">
-		<meta name="author" content='Ricardo "Rudxain" Fernández Serrata'>
+		<meta name=description content='Tries to find a counterexample to the Collatz Conjecture'>
+		<meta name=keywords content='Collatz, conjecture, 3n+1, counter-example, math, search'>
+		<meta name=author content='Ricardo "Rudxain" Fernández Serrata'>
 
-		<meta property="og:title" content="Collatz finder">
-		<meta property="og:description" content="Tries to find a counterexample to the Collatz Conjecture">
-		<meta property="og:site_name" content="Rudxain GitHub Page">
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://Rudxain.github.io/Collatz-finder">
+		<meta property=og:title content='Collatz finder'>
+		<meta property=og:description content='Tries to find a counterexample to the Collatz Conjecture'>
+		<meta property=og:site_name content='Rudxain GitHub Page'>
+		<meta property=og:type content=website>
+		<meta property=og:url content=https://Rudxain.github.io/Collatz-finder>
 
-		<meta name="color-scheme" content="light dark">
-		<meta name="theme-color" content="#f80">
+		<meta name=color-scheme content='light dark'>
+		<meta name=theme-color content=#f80>
 
-		<script src="lib.js"></script>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src=lib.js></script>
+		<meta name=viewport content='width=device-width, initial-scale=1'>
 		<style>
+			.center {
+				position: absolute;
+				top: 50%; left: 50%;
+				transform: translate(-50%, -50%)
+			}
 
+			#hd { top: 25% }
+
+			#progress {
+				top: 66%;
+				color: #f80;
+				accent-color: #f80
+			}
+			progress::-moz-progress-bar { background: #f80 !important }
+			progress::-webkit-progress-value { background: #f80 !important }
+
+			#searchBtn { left: 60% }
 		</style>
 	</head>
 	<body>
-		<input id="inp" type="text">
-		<progress id="progress" value=1></progress>
-		<script src="index.js" defer></script>
+		<h1 id=hd class=center>Collatz finder</h1>
+		<input id=inp class=center type=text>
+		<button id=searchBtn class=center>Search</button>
+		<progress id=progress class=center value=1></progress>
+		<script src=index.js defer></script>
 	</body>
 </HTML>

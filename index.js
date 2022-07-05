@@ -1,14 +1,18 @@
 'use strict';
-const searchBtn = document.getElementById('searchBtn')
+const getByID = document.getElementById
+const searchBtn = getByID('searchBtn')
 
 let interval = null
 searchBtn.addEventListener('click', () => {
-	if (interval !== null) return;
+	if (interval !== null) return
+
+	//Collatz.search(getByID('inp').value)
 	interval = setInterval(() => {
-		document.getElementById('progress').value = Collatz.progress
+		getByID('progress').value = Collatz.progress
 		if (Collatz.progress == 1) {
 			clearInterval(interval)
 			interval = null
+
 		}
 	}, 1000)
 })
