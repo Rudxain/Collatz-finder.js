@@ -18,7 +18,7 @@
 	*/
 
 	let limPos = (1n << 68n) | 1n
-	let limNeg = (-1n << 18n) | 1n
+	let limNeg = (-1n << 32n) | 1n
 	let progress = 1 //there's no task pending, so 100% complete
 
 	globalThis.Collatz = {
