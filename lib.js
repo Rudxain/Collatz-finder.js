@@ -5,7 +5,7 @@
 		//C = [0n], D = [0n],
 		f = n => (n & 1n ? 3n * n + 1n : n) >> 1n,
 		//remove all trailing zeros
-		trim = n => {while (!(n & 1n)) n >>= 1n; return n}
+		trim = n => {if (n) while (!(n & 1n)) n >>= 1n; return n}
 
 	/*precompute arrays
 	for (let b = 1n; b < (1n << k); b++) {
