@@ -30,8 +30,6 @@
 
 		#hd { top: 25% }
 
-		#searchBtn { left: 60% }
-
 		#mainprog { top: 66% }
 
 		progress {
@@ -44,8 +42,10 @@
 
 <body>
 	<h1 id=hd class=center>Collatz finder</h1>
-	<input id=inp class=center type=text>
-	<button id=searchBtn class=center>Search</button>
+	<div class=center>
+		<input id=inp type=text>
+		<button id=searchBtn>Search</button>
+	</div>
 	<progress id=mainprog class=center value=1></progress>
 	<script src=main.js defer></script>
 </body>
