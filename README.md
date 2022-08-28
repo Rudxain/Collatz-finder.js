@@ -12,8 +12,6 @@ You can use a script tag in your HTML files with its `src` attribute set to the 
 
 You can replace the value of `Collatz.limit*` if you want to skip to bigger ints, or double-check small ints. But be aware that your input value will be coerced by `BigInt` and forced to be odd instead of even, it'll also have a minimum value equal to the greatest term in the trivial cycle +-1 (depends on input sign).
 
-You can get the computation progress of `search` by accessing the `progress` property, the number is a ratio in the interval [0, 1]
-
 ## Website
 Currently, the website is unusable. I'm working on it.
 
