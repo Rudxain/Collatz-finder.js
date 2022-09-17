@@ -22,3 +22,25 @@ Currently, the website is unusable. I'm working on it.
 If `n` is a Natural that when tripled and incremented becomes a power of 2 then it's of the form `3n + 1 = 2^m`, thus equivalent to `n = Mersenne(m) / 3`. Therefore, `m = 2k`, because `bitlen(3) = 2`, where `bitlen(x) = ilb(x) + 1`, so `n = (2^(2k) - 1) / 3`. This means that `3n+1` is a **perfect square power of 2**, because it has an even number of binary trailing zeros.
 
 An optimization based on this https://math.stackexchange.com/a/2285699 , states (if I understood correctly) that an int of the form `2^a + n`, where `n` is a number already checked and `2^a >= n`, could be discarded if the length of the hailstone sequence is small enough to preserve at least 1 of the zeros of the most significant slice (the zeros that were added by the power of 2). So a binary numeral like `10000000000000011` can be discarded because the hailstone length of 3 is small, however a numeral like `10111` must be processed because the hailstone length of 7 is too long to preserve the only `0` available
+
+# Unconditional function limit
+> The notation "f^n(x)" means "apply f to x, n times". So f^0(x) = x, f^1(x) = f(x), f^2(x) = f(f(x)), and so on...
+
+let f(x) = (3x + 1) / 2
+
+Does the following limit converge for any arbitrary x?
+
+lim n -> Inf: f^(n + 1)(x) / f^n(x)
+
+What about this one?
+
+lim x -> Inf: f(x + 1) / f(x)
+
+Are both limits irrational? If so, are they transcendental?
+
+# A doubt I have
+> The following is subjective, because it heavily depends on my knowledge of the problem.
+
+For a an arbitrary positive `n` to diverge to +Infinity when the Collatz procedure is applied, it must be a number that **always becomes odd** after applying the `f` previously mentioned. If we take a heuristic/statistical POV, **this is impossible**.
+
+Why has nobody proven that no number can't diverge? Why is everybody focused on finding unknown cycles and proving the conjecture true?
