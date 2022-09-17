@@ -35,15 +35,11 @@ Does the following limit converge for any arbitrary x?
 
 lim n -> Inf: f^(n + 1)(x) / f^n(x)
 
-What about this one?
-
-lim x -> Inf: f(x + 1) / f(x)
-
-Are both limits irrational? If so, are they transcendental?
+Is it irrational? If so, is it transcendental?
 
 # A doubt I have
 > The following is subjective, because it heavily depends on my knowledge of the problem.
 
-For a an arbitrary positive `n` to diverge to +Infinity when the Collatz procedure is applied, it must be a number that **always becomes odd** after applying the `f` previously mentioned. If we take a heuristic/statistical POV, **this is impossible**.
+For an arbitrary positive `n` to diverge to +Infinity when the Collatz procedure is applied, it must be a number that **always becomes odd** after applying the `f` previously mentioned. If we take a heuristic/statistical POV, **this is impossible**.
 
 Why has nobody proven that no number can't diverge? Why is everybody focused on finding unknown cycles and proving the conjecture true?
