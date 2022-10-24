@@ -21,6 +21,13 @@ Currently, the website is unusable. I'm working on it.
 ## Native executable
 [Rust implementation](https://github.com/Rudxain/collatz_finder)
 
+# "What to do if I find a counter-example?"
+This is not a stupid question! I would also not know what to do in one of the most epic moments in the history of math!
+
+I suggest you to post your results everywhere! A GH Issue here, r/Math, YouTube. But [don't edit the Wikipedia page](https://en.wikipedia.org/wiki/Wikipedia:No_original_research). To make people take you seriously, you must post the numeral that disproves CC. It's very likely that it'll be  **[[ H U G E ]]** ,  so I recommend posting a [gist](https://gist.github.com) containing the full numeral, and then post links to that gist. A tip for smaller size, hexadecimal is more compact than dec, raw-binary is more compact than hex. If you use hex or raw, clarify which endianness (to disambiguate).
+
+Another tip, **ensure nobody else takes credit for it.** I know that sounds egotistical, but nobody wants to give countless hours of computing power for free, am I right? So you must keep your results *secret*, until you can ensure that your name/identity is "linked" to your computer, and that your computer is also "linked" to the result.
+
 # Some algebra
 If `n` is a Natural that when tripled and incremented becomes a power of 2 then it's of the form `3n + 1 = 2^m`, thus equivalent to `n = Mersenne(m) / 3`. Therefore, `m = 2k`, because `bitlen(3) = 2`, where `bitlen(x) = ilb(x) + 1`, so `n = (2^(2k) - 1) / 3`. This means that `3n+1` is a **perfect square power of 2**, because it has an even number of binary trailing zeros.
 
