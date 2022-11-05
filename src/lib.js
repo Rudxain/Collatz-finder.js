@@ -1,14 +1,13 @@
+//@ts-check
 'use strict'
 const Collatz = (() => {
-	const Float = Number, Int = BigInt
-
-	/**@param {bigint} n*/
-	const f = n => (n & 1n ? 3n * n + 1n : n) >> 1n
-
 	/**
-	remove all trailing zeros
+	remove all binary trailing zeros
 	@param {bigint} n
 	*/const trim = n => { if (n) while (!(n & 1n)) n >>= 1n; return n }
+
+	/**@param {bigint} n*/
+	const f = n => trim((n & 1n ? 3n * n + 1n : n) >> 1n)
 
 	/*precompute arrays
 	const k = 5n, C = [0n], D = [0n]
@@ -25,42 +24,41 @@ const Collatz = (() => {
 	let limNeg = (-1n << 33n) | 1n
 
 	const Collatz = {
-		search: len => {
-			len = Float(len)
+		search: (/**@type {bigint}*/ len) => {
 			if (len < 0)
 				for (let i = 0, n; i > len; i--, limNeg -= 2n) {
 					n = limNeg
-					do n = trim(f(n)); while (n < limNeg)
+					do n = f(n); while (n < limNeg)
 					if (n == limNeg) return limNeg
 				}
 			else
 				for (let i = 0, n; i < len; i++, limPos += 2n) {
 					n = limPos
-					do n = trim(f(n)); while (n > limPos)
+					do n = f(n); while (n > limPos)
 					if (n == limPos) return limPos
 				}
 		},
-		test: n => {
-			const m = n = trim(Int(n))
+		test: (/**@type {bigint}*/ n) => {
+			const m = n = trim(n)
 			if (n < 0n) {
 				if (n >= limNeg) return false
-				do n = trim(f(n)); while (n < limNeg)
+				do n = f(n); while (n < limNeg)
 			}
 			else {
 				if (n <= limPos) return false
-				do n = trim(f(n)); while (n > limPos)
+				do n = f(n); while (n > limPos)
 			}
 			return n == m
 		},
 		get limitPos() { return limPos },
-		set limitPos(x) {
-			if (!((x = Int(x)) & 1n)) x--
+		set limitPos(/**@type {bigint}*/ x) {
+			if (!(x & 1n)) x--
 			if (x < 5n) x = 5n
 			limPos = x
 		},
 		get limitNeg() { return limNeg },
-		set limitNeg(x) {
-			if (!((x = Int(x)) & 1n)) x++
+		set limitNeg(/**@type {bigint}*/ x) {
+			if (!(x & 1n)) x++
 			if (x > -273n) x = -273n
 			limNeg = x
 		}
