@@ -14,9 +14,9 @@ This is not production-ready. The public API is unstable, expect breaking change
 ## Library API
 You can use a script tag in your HTML files with its `src` attribute set to the path of your downloaded copy of the `lib.js` file. I recommend you rename it to something like `Collatz-finder.js`. Another option is to copy-paste the text contents of the file into the browser console, then run it. After that, you can call `Collatz.search` method within other scripts in your HTML or in the console.
 
-`Collatz.search` takes an argument that must be coercible by the [`BigInt`](https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-bigint-constructor) constructor, so avoid invalid values or it'll throw an error. The only input argument must be the number of integers you want to check, starting from `Collatz.limitPos` if the input is positive or `limitNeg` if negative. If any of those ints is detected to be a counterexample, the method will let you know by returning that int, if no counterexample is found it returns `undefined`.
+`Collatz.search` takes an argument that must be the number of integers you want to check, starting from `Collatz.limitPos` if the input is positive, or `limitNeg` if negative. If any of those ints is detected to be a counterexample, the method will let you know by returning that int, if no counterexample is found it returns `undefined`.
 
-You can replace the value of `Collatz.limit*` if you want to skip to bigger ints, or double-check small ints. But be aware that your input value will be coerced by `BigInt` and forced to be odd instead of even, it'll also have a minimum value equal to the greatest term in the trivial cycle +-1 (depends on input sign).
+You can replace the value of `Collatz.limit*` if you want to skip to bigger ints, or double-check small ints. But be aware that your input value will be forced to be odd instead of even, it'll also have a minimum value equal to the greatest term in the trivial cycle +-1 (depends on input sign).
 
 ## Website
 Currently, the website is unusable. I'm working on it.
