@@ -7,6 +7,9 @@ The purpose of this is to allow any human or program to aid in the search for a 
 # Note
 These programs assume that numbers don't diverge to infinity, it only tries to find cycles. This means it could enter an infinite loop that allocates increasingly more and more memory, until an OOM error happens.
 
+# Disclaimer
+This is not production-ready. The public API is unstable, expect breaking changes.
+
 # Usage
 ## Library API
 You can use a script tag in your HTML files with its `src` attribute set to the path of your downloaded copy of the `lib.js` file. I recommend you rename it to something like `Collatz-finder.js`. Another option is to copy-paste the text contents of the file into the browser console, then run it. After that, you can call `Collatz.search` method within other scripts in your HTML or in the console.
