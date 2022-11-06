@@ -25,7 +25,7 @@ rules:
         - warn
         - never
     no-unused-vars:
-    - error
+    - warn
     - vars: local
     no-constant-binary-expression: warn
     no-constructor-return: warn
