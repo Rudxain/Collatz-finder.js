@@ -31,7 +31,8 @@ const Collatz = (() => {
 
 	const C = {
 		/**
-		search in a finite range, or up-to `Infinity`
+		Search in a finite range, or up-to `Infinity`.
+		Starting from `limitPos` if the input is unsigned, or `limitNeg` if negative.
 		@param {number|bigint} count how many odd ints to check
 		@return counter-example if found, or `undefined` if not found
 		*/
