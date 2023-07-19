@@ -55,13 +55,13 @@ An optimization based on this <https://math.stackexchange.com/a/2285699> , state
 ## Unconditional function limit
 
 > The notation "f^n(x)" means "apply f to x, n times". So f^0(x) = x, f^1(x) = f(x), f^2(x) = f(f(x)), and so on...
-
+```
 let f(x) = (3x + 1) / 2
-
+```
 Does the following limit converge for any arbitrary x?
-
-lim n -> Inf: f^(n + 1)(x) / f^n(x)
-
+```
+lim n->∞ f^(n+1)(x) / f^n(x)
+```
 Is it irrational? If so, is it transcendental?
 
 ## A doubt I have
