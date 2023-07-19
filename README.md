@@ -26,7 +26,7 @@ This is not production-ready. The public API is unstable, expect breaking change
 
 You can use a script tag in your HTML files with its `src` attribute set to the path of your downloaded copy of the `lib.js` file. I recommend you rename it to something like `Collatz-finder.js`. Another option is to copy-paste the text contents of the file into the browser console, then run it. Then, the `Collatz` object will be available in the global namespace.
 
-You can replace the value of `Collatz.limit*` if you want to skip to bigger ints, or double-check smaller ints. But be aware that your input value will be forced to be odd instead of even, it'll also have a minimum value equal to the greatest (absolute) term in the trivial cycle +-1 (depends on input sign).
+You can replace the value of `Collatz.limit*` if you want to skip to bigger ints, or double-check smaller ints. But be aware that your input value will be forced to be odd instead of even, it'll also have a minimum value equal to the greatest (absolute) term in the trivial cycle ±1 (depends on input sign).
 
 More info can be found in JSdoc comments.
 
