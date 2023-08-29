@@ -4,6 +4,12 @@
 <img alt='3n+1' src=src/icon.svg width=50% height=50%>
 </div>
 
+## Archive
+
+[Reason](https://youtube.com/watch?v=jlh21U2texo&lc=UgzLFcfKTav59WvOB0Z4AaABAg).
+
+WARNING: this repo is staged for potential deletion!
+
 ## Intro
 
 The purpose of this is to allow any human or program to aid in the search for a counterexample to disprove the Collatz Conjecture, and settle this infamous but interesting problem once and for all.
